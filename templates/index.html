@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Churn Prediction</title>
+    <style>
+        body{
+            margin:80px;
+            background-color: bisque;
+            /* margin-left:650px; */
+            /* align-items: center;
+            justify-content:center; */
+            
+        }
+        form{
+            justify-content:center;
+            justify-items:center;
+            margin-left:300px;
+            height:90vh;
+            width:50vw;
+            border:1px solid black;
+            background-color: greenyellow;
+        }
+
+        label{
+            margin:80px;
+            font-size: 20px;;
+            margin-top:40px;
+        }
+
+        input[type="number"] ,select{
+            height:4vh;
+            width:20vw;
+            margin-left:20px;
+
+        }
+
+        #ContractRenewal{
+            margin-left:4px;
+        }
+
+        #DataPlan{
+            margin-left:70px;
+        }
+
+        #DataUsage{
+            margin-left:50px;
+        }
+        
+        #CustServCalls{
+            margin-left:-40px;
+        }
+
+        #DayCalls{
+            margin-left:70px;
+        }
+
+        #DayMins{
+            margin-left:40px;
+        }
+
+        #OverageFee{
+            margin-left:50px;
+        }
+
+        button[type="submit"]
+        {
+            height:4vh;
+            width:5vw;
+            margin:30px;
+            margin-left:150px;
+        }
+
+        #RoamMins{
+            margin-left:10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <form action="/predict" method="post">
+        <h2>Customer Churn Prediction</h2>
+        <label>Account Weeks:</label>
+        <input type="number" name="AccountWeeks" required><br><br>
+        <label>Contract Renewal:</label>
+        <select id="ContractRenewal" name="ContractRenewal">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+        <label>Data Plan:</label>
+        <select id="DataPlan" name="DataPlan">
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select><br><br>
+
+        <label>Data Usage:</label>
+        <input type="number" step="0.01" id="DataUsage" name="DataUsage"><br><br>
+
+        <label>Customer Service Call:</label>
+        <input type="number" id="CustServCalls" name="CustServCalls"><br><br>
+
+        <label>Day Minutes:</label>
+        <input type="number" id="DayMins" step="0.1" name="DayMins"><br><br>
+
+        <label>Day Calls:</label>
+        <input type="number" id="DayCalls" name="DayCalls"><br><br>
+
+        <label>Monthly Charge:</label>
+        <input type="number" step="0.01" name="MonthlyCharge"><br><br>
+
+        <label>Overage Fee:</label>
+        <input type="number" step="0.01" id="OverageFee" name="OverageFee"><br><br>
+
+        <label>Roaming Minutes:</label>
+        <input type="number" step="0.1" id="RoamMins" name="RoamMins"><br><br>
+
+        <button type="submit">predict</button>
+
+    </form>
+
+</body>
+
+</html>
+</body>
+
+</html>

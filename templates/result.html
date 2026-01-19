@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body{
+            margin:80px;
+            /* justify-content: center;
+            justify-items: center;
+            align-items: center; */
+            background-color:purple;
+        }
+
+        .container{
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            border:1px solid black;
+            height:30vh; 
+            background-color: lavender;
+            border-radius: 30px;
+            /* width:10vw; */
+            /* border:1px solid black; */ 
+            
+        }
+
+        h1{
+            font-size:60px;
+        }
+
+        a{
+            margin-left:500px;
+            padding:20px;
+            /* background-color: wheat; */
+            /* height:2vh;
+            width:10vw; */
+            /* border:1px solid black; */
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h2>Prediction Result</h2>
+    <p><strong>{{result}}</strong></p>
+    <p id="churn_prob">Churn Probabilty : {{probability}}</p>
+
+    <a href="/">Predict Again</a>
+    </div>
+</body>
+</html>
