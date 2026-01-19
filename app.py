@@ -37,5 +37,6 @@ def predict():
         probability=f"{probability*100:2f}%"
     )
 
-if __name__=="__main__":
-    app.run(host="0.0.0.0", port=5000)
+if __name__ == "__main__":
+    app.run()
+
