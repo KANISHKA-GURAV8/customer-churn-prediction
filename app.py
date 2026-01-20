@@ -37,6 +37,6 @@ def predict():
         probability=f"{probability*100:2f}%"
     )
 
-if __name__ == "__main__":
-    app.run()
+
+
 
